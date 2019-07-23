@@ -23,17 +23,14 @@ io.on('connection', (socket) => {
    socket.on('chat:message', (data) => {
     io.sockets.emit('chat:message' , data)
    })
+
+  socket.on('chat:typing' , (data) => {   
+   socket.broadcast.emit('chat:typing', data);
+  })
 });
 
 
 
-//message.addEventListener('keypress', function (){
-    //socket.emit('chat:typing', username.value)
-
-//socket.on('chat:message', function (data) {
-    //output.innerHTML += ~ `<p>
-    //<strong>${data.username}</strong>: ${data.message}
-    //</p>`
 
 
 
