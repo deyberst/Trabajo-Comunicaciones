@@ -8,12 +8,7 @@ let login = document.getElementById('login');
 let output = document.getElementById('output');
 let actions = document.getElementById('actions');
 
-/*var product = null;
-
-function sub(){
-product = document.getElementsByName("color)[0].value;
-};*/
-
+//función del botón "send" para que envie el mensaje
 enviar.addEventListener('click' , function () {
     socket.emit('chat:message' , {
         message : message.value,
@@ -29,6 +24,7 @@ message.addEventListener('keypress', function () {
     socket.emit('chat:typing' , username.value);
 });
 
+//función que crea número aleatorios entre 0 y 255 para darle un color aleatorio en rgb al texto copiado
 function getRandomRGBPart () {
     return Math.random() * (256 - 0);
 }
