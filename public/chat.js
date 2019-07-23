@@ -20,7 +20,7 @@ message.addEventListener('keypress', function () {
 
 socket.on('chat:message', function (data) {
     actions.innerHTML = '';
-    output.innerHTML += `<b style="color:red;"> ${data.message}</b>`
+    output.innerHTML += `<b style="color:#87;"> ${data.message}</b>`
 });
 
 socket.on('chat:typing', function (data){
