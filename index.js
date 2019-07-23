@@ -12,7 +12,7 @@ const app = express();
 //});
 
 app.use(express.static(path.join(__dirname, 'public')));
-const server = app.listen(8080, '192.168.192.16');
+const server = app.listen(8080, '192.168.192.19');
 // start the server
 //const server = app.listen(app.get('port'), () => {
    // console.log('server on port', app.get('port'));
