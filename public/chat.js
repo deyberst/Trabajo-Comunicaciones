@@ -14,7 +14,6 @@ enviar.addEventListener('click' , function () {
         message : message.value,
         username: username.value
     });
-    message.setAttribute(value=="");
 });
 
 message.addEventListener('keypress', function () {
@@ -29,7 +28,7 @@ function bloquea(){
     botonBloq.setAttribute('disabled', true)
     setTimeout(() => {
        desbloquea() 
-    }, 1000);
+    }, 15000);
 }
 
 function desbloquea(){

@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     <link rel="stylesheet" href="main.css">
 </head>
-<body>
+<body background="fondo.jpg">
 
     <div id="chat-container">
         <div id="chat-window">
@@ -20,11 +20,12 @@
             <div id="actions"></div>
         </div>
         <input type="text" id="username" placeholder="Usuario">
-        <input type="text" id="message" placeholder="Frase">
-        <div><button id="send">Send</button>
-        
+        <input type="text" id="message" placeholder="Frase" onclick="this.value=''">
+        <div><button id="send" >Enviar</button>
+    
     </div>
 
+   
     <script src="/socket.io/socket.io.js" charset="utf-8"></script>
     <script src="chat.js" charset="utf-8"></script>
 </body>
