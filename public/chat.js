@@ -14,15 +14,27 @@ enviar.addEventListener('click' , function () {
         message : message.value,
         username: username.value
     });
-});
-
-login.addEventListener('click' , function () {
-
+    message.setAttribute(value=="");
 });
 
 message.addEventListener('keypress', function () {
     socket.emit('chat:typing' , username.value);
 });
+
+
+var botonBloq = document.getElementById('send');
+botonBloq.addEventListener("click", bloquea, false);
+
+function bloquea(){
+    botonBloq.setAttribute('disabled', true)
+    setTimeout(() => {
+       desbloquea() 
+    }, 1000);
+}
+
+function desbloquea(){
+    botonBloq.removeAttribute('disabled')
+}
 
 //función que crea número aleatorios entre 0 y 255 para darle un color aleatorio en rgb al texto copiado
 function getRandomRGBPart () {
